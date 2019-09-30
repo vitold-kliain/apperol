@@ -1,0 +1,15 @@
+//
+// cards.scss
+//
+
+
+.card {
+  border: $border-width*2 solid $border-color;
+  border-radius: .75rem;
+}
+
+@include media-breakpoint-down(sm) {
+  .card-body {
+    padding: $spacer*1.5;
+  }
+}

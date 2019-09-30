@@ -1,0 +1,119 @@
+//
+// buttons.scss
+//
+
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    border-color: rgba($value, .25);
+
+    &:hover {
+      background-color: rgba($value, .2);
+      border-color: rgba(0, 0, 0, 0);
+      color: $value;
+    }
+  }
+}
+
+.btn {
+  .icon {
+    height: 1.25rem;
+  }
+
+  &.rounded-circle {
+    padding: 0;
+    width: $spacer*3;
+    height: $spacer*3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.btn-sm {
+    &.rounded-circle {
+      width: $spacer*2.25;
+      height: $spacer*2.25;
+
+      .icon {
+        height: 1rem;
+      }
+    }
+  }
+
+  &.btn-lg {
+    .icon {
+      height: $spacer*2.25;
+    }
+
+    &.rounded-circle {
+      width: $spacer*4.5;
+      height: $spacer*4.5;
+
+      .icon {
+        height: 1.5rem;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: $font-size-base;
+      padding: $btn-padding-y $btn-padding-x;
+    }
+  }
+
+  &.btn-xl {
+    .icon {
+      height: $spacer*2.25;
+    }
+
+    &.rounded-circle {
+      width: $spacer*5.5;
+      height: $spacer*5.5;
+
+      .icon {
+        height: 2.5rem;
+      }
+    }
+  }
+
+  &.btn-play {
+    animation: pulse 2s infinite;
+    border: 2px solid #fff;
+
+    &:after {
+      content: '';
+      position: absolute;
+      border-radius: $rounded-pill;
+      left: -1.25rem;
+      top: -1.25rem;
+      width: calc(100% + 2.5rem);
+      height: calc(100% + 2.5rem);
+      border: $border-width*2 solid $white;
+    }
+  }
+}
+
+// Back to top
+.btn-back-to-top {
+  position: fixed;
+  bottom: $spacer*2;
+  right: $spacer*2;
+  z-index: $zindex-fixed;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(222, 208, 207, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 0 15px rgba(228, 55, 95, 0);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

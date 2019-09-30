@@ -1,0 +1,13 @@
+// 
+// swiper.scss
+//
+
+
+@import "CSS:../plugins/swiper.min";
+
+.swiper-pagination-bullet-active {
+  transition: all .5s ease;
+  background-color: $body-color;
+  transform: scale(1.3);
+  outline: none;
+}

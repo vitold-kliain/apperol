@@ -1,0 +1,11 @@
+//
+// page-transitions.scss
+// 
+
+
+body{
+  transition: opacity .4s ease;
+  &.js-fade-page{
+    opacity: 0;
+  }
+}

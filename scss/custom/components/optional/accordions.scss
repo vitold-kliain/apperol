@@ -1,0 +1,20 @@
+//
+// accordions.scss
+//
+
+
+.accordion{
+    >[data-toggle="collapse"]{
+        &[aria-expanded="true"]{
+            h6{
+                color: $primary-2;
+            }
+            .icon{
+                transform: rotateZ(180deg);
+                [fill]:not([fill="none"]){
+                    fill: $primary-2;
+                }
+            }
+        }
+    }
+}

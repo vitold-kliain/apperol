@@ -1,0 +1,15 @@
+// 
+// colors.scss
+//
+
+
+.bg-gradient {
+  background: linear-gradient(341.8deg, $primary-2 10.2%, $primary-3 100%) !important;
+}
+
+@each $color,
+$value in $theme-colors {
+  .bg-#{$color}-alt {
+    background-color: rgba($value, .1);
+  }
+}

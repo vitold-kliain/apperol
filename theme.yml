@@ -1,0 +1,22 @@
+name: 'Apperol landing page'
+shortName: Apperol
+theme_version: 0.0.1
+bootstrap_version: 4.3.1
+domain: apperol
+scripts:
+    external:
+        - aos
+        - swiper
+        - jquery
+        - jquery-countdown
+        - jarallax
+        - scrollmonitor
+        - '@tanem/svg-injector'
+    globals:
+        aos: AOS
+        countup.js: CountUp
+        swiper: Swiper
+        jarallax: jarallax
+        jquery: jQuery
+        scrollmonitor: scrollMonitor
+        '@tanem/svg-injector': SVGInjector

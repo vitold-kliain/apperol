@@ -1,10 +1,6 @@
-# Bootstrap landing page 1
+# Bootstrap landing page
 
 Apperol landing page
-
-## Demo file
-
-The index file is named `index.html` in the main demo
 
 ## Get started
 
